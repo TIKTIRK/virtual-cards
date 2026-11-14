@@ -1,0 +1,131 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+html {
+	background: var(--bg);
+	scroll-behavior: smooth;
+	scroll-padding-top: calc(env(safe-area-inset-top, 0px) + var(--nav) + 16px);
+	-webkit-text-size-adjust: 100%;
+	height: 100%;
+}
+body {
+	margin: 0;
+	min-height: 100%;
+	background: var(--bg);
+	color: var(--tx);
+	font: 400 16px/1.6 var(--fb);
+	overflow-wrap: anywhere;
+	-webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+	margin: 0;
+}
+h1,
+h2 {
+	font-family: var(--fd);
+	font-weight: 500;
+	letter-spacing: -0.02em;
+	line-height: 1.14;
+	text-wrap: balance;
+}
+h1 {
+	font-size: clamp(1.9rem, 4.6vw, 3.2rem);
+}
+h2 {
+	font-size: clamp(1.5rem, 3vw, 2.3rem);
+}
+h3 {
+	font-size: 1.05rem;
+	font-weight: 800;
+	line-height: 1.35;
+}
+ul,
+ol {
+	padding: 0;
+	list-style: none;
+}
+a {
+	color: inherit;
+}
+button {
+	font-family: inherit;
+}
+:focus-visible {
+	outline: 2px solid var(--acc);
+	outline-offset: 3px;
+	border-radius: 8px;
+}
+.skip {
+	position: absolute;
+	left: -999px;
+	top: 8px;
+	background: var(--btn);
+	color: var(--btnt);
+	padding: 8px 14px;
+	border-radius: 8px;
+	z-index: 200;
+}
+.skip:focus {
+	left: 8px;
+}
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 46px;
+	padding: 0 24px;
+	border-radius: 999px;
+	border: 1px solid transparent;
+	font-weight: 600;
+	font-size: 0.95rem;
+	text-decoration: none;
+	cursor: pointer;
+	background: var(--btn);
+	color: var(--btnt);
+	transition:
+		transform 0.15s,
+		opacity 0.2s,
+		background-color 0.2s;
+	text-align: center;
+	-webkit-tap-highlight-color: transparent;
+}
+.btn:hover {
+	opacity: 0.86;
+}
+.btn:active {
+	transform: scale(0.97);
+}
+.btn[disabled] {
+	opacity: 0.5;
+	cursor: progress;
+}
+.btn.g {
+	background: transparent;
+	color: var(--tx);
+	border-color: var(--line2);
+}
+.btn.g:hover {
+	background: var(--hov);
+	opacity: 1;
+}
+.btn.sm {
+	min-height: 40px;
+	padding: 0 18px;
+	font-size: 0.88rem;
+}
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation: none !important;
+		transition: none !important;
+		scroll-behavior: auto !important;
+	}
+}

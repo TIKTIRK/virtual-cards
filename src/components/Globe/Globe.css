@@ -1,0 +1,35 @@
+.globe {
+	position: absolute;
+	right: -16%;
+	top: 50%;
+	transform: translateY(-44%);
+	width: min(1050px, 120vw);
+	color: var(--globe);
+	pointer-events: none;
+	-webkit-mask-image: radial-gradient(circle, #000 34%, transparent 66%);
+	mask-image: radial-gradient(circle, #000 34%, transparent 66%);
+}
+.globe svg {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+.route {
+	stroke: var(--acc);
+	stroke-width: 1.6;
+	stroke-dasharray: 3 7;
+	opacity: 0.8;
+}
+.dot {
+	fill: var(--acc);
+	stroke: none;
+	transform-box: fill-box;
+	transform-origin: center;
+	animation: pulse 2.4s ease-in-out infinite;
+}
+@keyframes pulse {
+	50% {
+		transform: scale(1.9);
+		opacity: 0.5;
+	}
+}

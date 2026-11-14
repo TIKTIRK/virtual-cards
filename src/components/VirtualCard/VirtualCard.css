@@ -1,0 +1,66 @@
+.pcard {
+	position: relative;
+	width: 100%;
+	max-width: 430px;
+	align-self: flex-end;
+	aspect-ratio: 1.586;
+	border-radius: 22px;
+	padding: 22px 24px;
+	color: #fff;
+	background: linear-gradient(135deg, #2b3a9e, #3b4fd8 55%, #7c8dff);
+	background-size: 220% 220%;
+	background-position: 50% 30%;
+	box-shadow:
+		0 40px 70px -30px rgba(59, 79, 216, 0.55),
+		inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	overflow: hidden;
+	container-type: inline-size;
+	isolation: isolate;
+}
+.pt,
+.pb {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 3cqw;
+}
+.pt {
+	font: 500 4.2cqw var(--fd);
+	align-items: center;
+}
+.pt small {
+	font: 600 2.5cqw var(--fb);
+	letter-spacing: 0.14em;
+	opacity: 0.75;
+}
+.pbrand {
+	display: flex;
+	align-items: center;
+	gap: 2cqw;
+}
+.chip {
+	width: 11cqw;
+	height: 8.4cqw;
+	border-radius: 1.6cqw;
+	background: linear-gradient(135deg, #f1e2b0, #b79a4e);
+}
+.pn {
+	font-size: 5.2cqw;
+	letter-spacing: 0.07em;
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+}
+.pb {
+	font-size: 3.5cqw;
+}
+.pb small {
+	display: block;
+	font-size: 2.5cqw;
+	opacity: 0.7;
+}
+.pb b {
+	font: 500 4.4cqw var(--fd);
+}

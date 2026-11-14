@@ -1,0 +1,44 @@
+.hero {
+	position: relative;
+	min-height: min(100svh, 880px);
+	min-height: min(100dvh, 880px);
+	padding: calc(var(--nav) + 56px) 0 72px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+.hin {
+	position: relative;
+	width: 100%;
+	display: grid;
+	gap: 48px;
+	align-items: center;
+}
+@media (min-width: 900px) {
+	.hin {
+		grid-template-columns: 1.05fr 0.95fr;
+	}
+}
+.hin h1 {
+	max-width: 16ch;
+}
+.lead {
+	color: var(--mut);
+	font-size: 1.1rem;
+	max-width: 46ch;
+	margin-top: 22px;
+}
+.cta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-top: 32px;
+}
+.vis {
+	position: relative;
+	min-height: 440px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 20px;
+}

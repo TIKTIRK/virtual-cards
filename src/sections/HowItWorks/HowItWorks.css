@@ -1,0 +1,30 @@
+.steps {
+	counter-reset: s;
+	display: grid;
+	gap: 16px;
+	margin-top: 36px;
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+.steps li {
+	counter-increment: s;
+	background: var(--sf);
+	border: 1px solid var(--line);
+	border-radius: 22px;
+	padding: 26px;
+	min-height: 180px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 18px;
+}
+.steps li::before {
+	content: counter(s);
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	background: var(--btn);
+	color: var(--btnt);
+	display: grid;
+	place-items: center;
+	font: 500 0.95rem var(--fd);
+}

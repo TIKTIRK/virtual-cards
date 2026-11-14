@@ -1,0 +1,27 @@
+.cab {
+	padding-top: calc(var(--nav) + 40px);
+	padding-bottom: 80px;
+}
+.cab h1 {
+	font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+}
+.cab .sub {
+	margin-top: 6px;
+	margin-bottom: 28px;
+}
+.cab h2 {
+	font-family: var(--fb);
+	font-weight: 800;
+	font-size: 1.15rem;
+	letter-spacing: 0;
+	margin-bottom: 8px;
+}
+.box {
+	background: var(--sf);
+	border: 1px solid var(--line);
+	border-radius: 28px;
+	padding: clamp(20px, 3vw, 28px);
+}
+.empty {
+	color: var(--mut);
+}

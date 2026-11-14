@@ -1,0 +1,17 @@
+.rv {
+	opacity: 0;
+	transform: translateY(18px);
+	transition:
+		opacity 0.6s,
+		transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.rv.in {
+	opacity: 1;
+	transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+	.rv {
+		opacity: 1;
+		transform: none;
+	}
+}
