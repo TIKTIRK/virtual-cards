@@ -41,8 +41,8 @@ export default function App() {
 			<Navbar />
 			<Routes>
 				<Route path='/' element={<Home />} />
-				<Route path='/login' element={<Auth mode='login' />} />
-				<Route path='/register' element={<Auth mode='register' />} />
+				<Route path='/login' element={<Auth key='login' mode='login' />} />
+				<Route path='/register' element={<Auth key='register' mode='register' />} />
 				<Route
 					path='/cabinet'
 					element={

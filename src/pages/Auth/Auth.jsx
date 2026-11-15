@@ -93,11 +93,7 @@ export default function Auth({ mode }) {
 
 	return (
 		<main id='main' className='au'>
-			<section
-				className={'apanel' + (shake ? ' shake' : '')}
-				onAnimationEnd={() => setShake(false)}
-				aria-labelledby='ah'
-			>
+			<section className='apanel' aria-labelledby='ah'>
 				<div className='auth-tabs' role='tablist' aria-label='Авторизация'>
 					<Link
 						to='/login'
@@ -129,7 +125,12 @@ export default function Auth({ mode }) {
 						Регистрация
 					</h1>
 				)}
-				<form noValidate onSubmit={submit}>
+				<form
+					noValidate
+					onSubmit={submit}
+					className={shake ? 'shake' : ''}
+					onAnimationEnd={e => e.animationName === 'shake' && setShake(false)}
+				>
 					{reg ? (
 						<>
 							<Field id='name' label='ФИО' error={err.name}>
@@ -186,6 +187,7 @@ export default function Auth({ mode }) {
 						<div className='pw'>
 							<input
 								id='pw'
+								name={reg ? 'new-password' : 'password'}
 								type={show ? 'text' : 'password'}
 								autoComplete={reg ? 'new-password' : 'current-password'}
 								value={f.pw}
@@ -193,15 +195,13 @@ export default function Auth({ mode }) {
 								aria-invalid={!!err.pw}
 								aria-describedby='e-pw'
 							/>
-							{!reg && (
-								<button
-									type='button'
-									aria-pressed={show}
-									onClick={() => setShow(!show)}
-								>
-									{show ? 'Скрыть' : 'Показать'}
-								</button>
-							)}
+							<button
+								type='button'
+								aria-pressed={show}
+								onClick={() => setShow(!show)}
+							>
+								{show ? 'Скрыть' : 'Показать'}
+							</button>
 						</div>
 					</Field>
 					{reg && (

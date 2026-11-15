@@ -146,3 +146,7 @@
 		padding-top: calc(var(--nav) + 20px);
 	}
 }
+
+.apanel form > .btn[disabled] {
+	opacity: 0.75;
+}
