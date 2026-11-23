@@ -6,4 +6,6 @@ psycopg[binary]>=3.2
 pydantic[email]>=2.7
 pydantic-settings>=2.4
 argon2-cffi>=23.1
+pyjwt>=2.9
+slowapi>=0.1.9
 phonenumbers>=8.13
