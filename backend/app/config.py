@@ -5,7 +5,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     # значения читаются из файла .env (имена: DATABASE_URL, JWT_SECRET, ...)
-    model_config = SettingsConfigDict(env_file=".env")
+    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
     database_url: str                       # адрес PostgreSQL
     jwt_secret: str                         # секрет для подписи токена сессии
